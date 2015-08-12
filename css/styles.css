@@ -21,6 +21,12 @@ h1{
 h1[screen$="start"]{
     color:lightgray;
 }
+h3{
+    font-family: 'Source Code Pro',;
+}
+h3[screen$="start"]{
+    color:lightgray;
+}
 .background-vid[screen$="start"]{
     position:absolute;
     width:100%;
@@ -98,6 +104,14 @@ div[pos*="center"]{
     [input-padding-right]{
         margin-right:15%;
     }
+}
+.headphone-icon{
+    width:auto;
+    height:auto;
+}
+div[align-right]{
+    height:100%;
+    float:right;
 }
 .clock-hint{
     color:white;

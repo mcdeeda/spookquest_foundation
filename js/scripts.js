@@ -18,7 +18,10 @@ var musicFail = true;
 var codeval = "";
 
 function createUserCookie(roomnum){
-    newroomnum = roomnum + 1;
+    if(typeof roomnum === "undefined" || roomnum === null) {
+        roomnum = 0;
+    }
+    newroomnum = parseInt(roomnum) + 1;
     document.cookie="spookquest=" + newroomnum;
 };
 function getUserCookie(){
@@ -29,12 +32,14 @@ function getUserCookie(){
         while (cookieVal.charAt(0)==' ') cookieVal = cookieVal.substring(1);
         if (cookieVal.indexOf(name) == 0) return cookieVal.substring(name.length,cookieVal.length);
     }
-    return "";
+    return 0;
 };
 function checkEnd(){
     if(window.location.pathname == "/spookquest_v2/hallway_4.html"){
-        cookieVal = getUserCookie;
-        if(cookieVal >= 4){
+        var cookieVal = getUserCookie();
+        console.log("what's up");
+        console.log(cookieVal);
+        if(parseInt(cookieVal) >= 4){
             $("[pos=hall-center-4]").wrap("<a href='end_screen.html'></a>");
             var video = $(".vid")[0];
             video.src = webmBars;
@@ -43,6 +48,7 @@ function checkEnd(){
         }
     }
 };
+window.onload = checkEnd();
 $("[data-room-video-ceiling]").mouseenter(function () {
     $("[data-video-sky]")[0].play();
 });
