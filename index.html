@@ -1,27 +1,34 @@
-<!DOCTYPE html>
 <html>
-	<head>
+    <head>
+        <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-		<title>hello</title>
-		<link rel="stylesheet" type="text/css" href="css/styles.css" media="(max-width: 640px)">
-        <link href='http://fonts.googleapis.com/css?family=Source+Code+Pro:400,300,500,600' rel='stylesheet' type='text/css'>
+        <link rel="stylesheet" href="css/normalize.css">
+        <link rel="stylesheet" href="css/foundation.css">
+        <link rel="stylesheet" href="css/styles.css">
+        <meta name="language" content="english">
+        <meta name="description" content="you have entered an intangible world, one quite unlike your own. your only way back is to solve the mysteries hidden here, created from your own memories, and your own ideas">
+        <meta name="robots" content="index nofollow noodp">
+        <link href='http://fonts.googleapis.com/css?family=Source+Code+Pro' rel='stylesheet' type='text/css'>
+        <title>your quest begins</title>
     </head>
-
-<button><a href="hallway/hallway_1/index.html">Enter</a></button>
-        
-	<body class = "body">
-        <a href = "hallway/hallway_1/index.html">
-            <div class = "glass">
-                <video autoplay fullscreen loop>
-                    <source src = "vid/static.webm">
-                    <source src = "vid/static.mp4">
+    <body class="body">
+        <a href="hallway_1.html">
+            <div class="row outline_show fullWidth" screen="screen-start">
+            <div class="background-vid" screen="screen-start">
+                <video  class = "vid" autoplay muted loop data-video-sky screen="screen-start">
+                    <source src="video/static.webm" data-video-webm>
+                    <source src="video/static.mp4" data-video-mp4>
+                    video not supported in your browser
                 </video>
             </div>
+            <div class="small-6 medium-6 large-4 start_text">
+                    <h1 screen="screen-start">hi!</h1>
+                </div>
+                <div class="small-3 medium-3 large-4">
+                </div>
+                <div class="small-3 medium-3 large-4">
+                </div>
+        </div>
         </a>
-        <h1 class = "end-thanks">hi!</h1>
-        <audio loop autoplay>
-            <source src="../sound/jazz_music_edit.mp3">
-        </audio>
-	</body>
-<script src="scripts/jquery-2.1.4.js"></script> <script src="scripts/scripts.js"></script>
+    </body>
 </html>
